@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <title>My App</title>
+
+  </head>
+
+
+  <body>
+
+        <div class="header", align="center">
+            <h1>My App</h1>
+            <hr>
+        </div> <!-- div header ends -->
+
+        <div class="row" style="padding-top:5%;">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <div align="center">
+                    <form method="post" action="/run/?format=json" enctype="multipart/form-data" >
+                        <input id="target" class="form-control" name="target" type="text" placeholder="Enter your text here" autofocus>
+                        <br>
+                        <input onclick="submit()" class="btn btn-success" id="submit" type="submit" value="Submit">
+                    </form>
+				</div>
+                <div id="result"/>
+            </div>
+            <div class="col-sm-4"></div>
+        </div>
+
+
+
+        <div class="bottom"></div> <!-- div bottom ends -->
+        <div class="footer" ></div> <!-- div footer ends -->
+
+    </body>
+</html>
