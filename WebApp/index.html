@@ -43,6 +43,23 @@
 
         <div class="bottom"></div> <!-- div bottom ends -->
         <div class="footer" ></div> <!-- div footer ends -->
+	  
+	<script>
+    function submit(event) {
+        document.getElementById("result").innerHTML = "Please wait... Processing your text.";
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var output = this.response;
+        var parsed = JSON.parse(output);
+      document.getElementById("result").innerHTML = "This piece of text is : "+parsed.ans+" "+parsed.emoji + " with a probability of "+parsed.probability;
+    }
+  };
+  xhttp.open("POST", "run/", true);
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.send("target="+document.getElementById("target").value);
+}
+</script>
 
     </body>
 </html>
